@@ -1,4 +1,6 @@
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
 
 const authController = {
   login: async (req, res) => {
@@ -39,3 +41,5 @@ const authController = {
     }
   }
 };
+
+module.exports = authController;
